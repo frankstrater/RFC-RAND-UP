@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Climate Infos -->
+<Civ4ClimateInfo xmlns="x-schema:CIV4GameInfoSchema.xml">
+	<ClimateInfos>
+		<ClimateInfo>
+			<Type>CLIMATE_TEMPERATE</Type>
+			<Description>TXT_KEY_CLIMATE_TEMPERATE</Description>
+			<iDesertPercentChange>2</iDesertPercentChange>
+			<iJungleLatitude>5</iJungleLatitude>
+			<iHillRange>5</iHillRange>
+			<iPeakPercent>25</iPeakPercent>
+			<fSnowLatitudeChange>0.14</fSnowLatitudeChange> <!-- Rhye -->
+			<fTundraLatitudeChange>0.12</fTundraLatitudeChange> <!-- Rhye -->
+			<fGrassLatitudeChange>0.01</fGrassLatitudeChange> <!-- Rhye -->
+			<fDesertBottomLatitudeChange>0.00</fDesertBottomLatitudeChange>
+			<fDesertTopLatitudeChange>0.02</fDesertTopLatitudeChange> <!-- Rhye -->
+			<fIceLatitude>0.95</fIceLatitude>
+			<fRandIceLatitude>0.25</fRandIceLatitude>
+		</ClimateInfo>
+		<ClimateInfo>
+			<Type>CLIMATE_TROPICAL</Type>
+			<Description>TXT_KEY_CLIMATE_TROPICAL</Description>
+			<iDesertPercentChange>-10</iDesertPercentChange>
+			<iJungleLatitude>3</iJungleLatitude> <!-- Rhye -->
+			<iHillRange>5</iHillRange>
+			<iPeakPercent>25</iPeakPercent>
+			<fSnowLatitudeChange>0.20</fSnowLatitudeChange> <!-- Rhye -->
+			<fTundraLatitudeChange>0.18</fTundraLatitudeChange> <!-- Rhye -->
+			<fGrassLatitudeChange>0.0</fGrassLatitudeChange>
+			<fDesertBottomLatitudeChange>-0.05</fDesertBottomLatitudeChange> <!-- Rhye -->
+			<fDesertTopLatitudeChange>0.0</fDesertTopLatitudeChange>
+			<fIceLatitude>0.95</fIceLatitude>
+			<fRandIceLatitude>0.17</fRandIceLatitude> <!-- Rhye -->
+		</ClimateInfo>
+		<ClimateInfo>
+			<Type>CLIMATE_ARID</Type>
+			<Description>TXT_KEY_CLIMATE_ARID</Description>
+			<iDesertPercentChange>17</iDesertPercentChange>  <!-- Rhye -->
+			<iJungleLatitude>7</iJungleLatitude>  <!-- Rhye -->
+			<iHillRange>5</iHillRange>
+			<iPeakPercent>25</iPeakPercent>
+			<fSnowLatitudeChange>0.08</fSnowLatitudeChange> <!-- Rhye -->
+			<fTundraLatitudeChange>-0.02</fTundraLatitudeChange> <!-- Rhye -->
+			<fGrassLatitudeChange>0.06</fGrassLatitudeChange> <!-- Rhye -->
+			<fDesertBottomLatitudeChange>-0.07</fDesertBottomLatitudeChange>
+			<fDesertTopLatitudeChange>0.08</fDesertTopLatitudeChange> <!-- Rhye -->
+			<fIceLatitude>0.95</fIceLatitude>
+			<fRandIceLatitude>0.20</fRandIceLatitude>
+		</ClimateInfo>
+		<ClimateInfo>
+			<Type>CLIMATE_COLD</Type>
+			<Description>TXT_KEY_CLIMATE_COLD</Description>
+			<iDesertPercentChange>-12</iDesertPercentChange>  <!-- Rhye -->
+			<iJungleLatitude>12</iJungleLatitude>  <!-- Rhye -->
+			<iHillRange>5</iHillRange>
+			<iPeakPercent>25</iPeakPercent>
+			<fSnowLatitudeChange>-0.05</fSnowLatitudeChange>  <!-- Rhye -->
+			<fTundraLatitudeChange>-0.17</fTundraLatitudeChange>  <!-- Rhye -->
+			<fGrassLatitudeChange>-0.05</fGrassLatitudeChange> <!-- Rhye -->
+			<fDesertBottomLatitudeChange>-0.05</fDesertBottomLatitudeChange>
+			<fDesertTopLatitudeChange>-0.10</fDesertTopLatitudeChange> <!-- Rhye -->
+			<fIceLatitude>0.9</fIceLatitude>
+			<fRandIceLatitude>0.30</fRandIceLatitude> <!-- Rhye -->
+		</ClimateInfo>
+		<!-- 
+		<ClimateInfo>
+			<Type>CLIMATE_ROCKY</Type>
+			<Description>TXT_KEY_CLIMATE_ROCKY</Description>
+			<iDesertPercentChange>0</iDesertPercentChange>
+			<iJungleLatitude>6</iJungleLatitude>  ( Rhye )
+			<iHillRange>6</iHillRange>  ( Rhye )
+			<iPeakPercent>33</iPeakPercent>  ( Rhye )
+			<fSnowLatitudeChange>-0.025</fSnowLatitudeChange>
+			<fTundraLatitudeChange>-0.1</fTundraLatitudeChange>  ( Rhye )
+			<fGrassLatitudeChange>0.0</fGrassLatitudeChange>
+			<fDesertBottomLatitudeChange>0.0</fDesertBottomLatitudeChange>
+			<fDesertTopLatitudeChange>-0.05</fDesertTopLatitudeChange>
+			<fIceLatitude>0.95</fIceLatitude>
+			<fRandIceLatitude>0.25</fRandIceLatitude>
+		</ClimateInfo> -->
+	</ClimateInfos>
+</Civ4ClimateInfo>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Speed -->
+<!-- NOTE: If you remove any of these you need to update GameInfo/CultureLevelInfos.xml. Also you will need to update the GlobalDefines.xml if you remove GAMESPEED_STANDARD -->
+<Civ4GameSpeedInfo xmlns="x-schema:CIV4GameInfoSchema.xml">
+	<GameSpeedInfos>
+		<!-- Rhye - start -->
+		<GameSpeedInfo>
+			<Type>GAMESPEED_NORMAL</Type>
+			<Description>TXT_KEY_GAMESPEED_NORMAL</Description>
+			<Help>TXT_KEY_GAMESPEED_NORMAL_HELP</Help>
+			<iGrowthPercent>100</iGrowthPercent>
+			<iTrainPercent>90</iTrainPercent>
+			<iConstructPercent>100</iConstructPercent>
+			<iCreatePercent>100</iCreatePercent>
+			<iResearchPercent>105</iResearchPercent>
+			<iBuildPercent>100</iBuildPercent>
+			<iImprovementPercent>100</iImprovementPercent>
+			<iGreatPeoplePercent>100</iGreatPeoplePercent>
+			<iCulturePercent>110</iCulturePercent>
+			<iAnarchyPercent>110</iAnarchyPercent>
+			<iBarbPercent>100</iBarbPercent>
+			<iFeatureProductionPercent>100</iFeatureProductionPercent>
+			<iUnitDiscoverPercent>100</iUnitDiscoverPercent>
+			<iUnitHurryPercent>100</iUnitHurryPercent>
+			<iUnitTradePercent>100</iUnitTradePercent>
+			<iUnitGreatWorkPercent>100</iUnitGreatWorkPercent>
+			<iGoldenAgePercent>100</iGoldenAgePercent>
+			<iHurryPercent>100</iHurryPercent>
+			<iHurryConscriptAngerPercent>100</iHurryConscriptAngerPercent>
+			<iInflationPercent>45</iInflationPercent>
+			<iInflationOffset>-120</iInflationOffset>
+			<iVictoryDelayPercent>100</iVictoryDelayPercent>
+			<GameTurnInfos>
+				<GameTurnInfo>
+					<iMonthIncrement>360</iMonthIncrement>
+					<iTurnsPerIncrement>30</iTurnsPerIncrement>
+				</GameTurnInfo>
+				<GameTurnInfo>
+					<iMonthIncrement>300</iMonthIncrement>
+					<iTurnsPerIncrement>44</iTurnsPerIncrement>
+				</GameTurnInfo>
+				<GameTurnInfo>
+					<iMonthIncrement>180</iMonthIncrement>
+					<iTurnsPerIncrement>106</iTurnsPerIncrement>
+				</GameTurnInfo>
+				<GameTurnInfo>
+					<iMonthIncrement>120</iMonthIncrement>
+					<iTurnsPerIncrement>81</iTurnsPerIncrement>
+				</GameTurnInfo>
+				<GameTurnInfo>
+					<iMonthIncrement>60</iMonthIncrement>
+					<iTurnsPerIncrement>60</iTurnsPerIncrement>
+				</GameTurnInfo>
+				<GameTurnInfo>
+					<iMonthIncrement>36</iMonthIncrement>
+					<iTurnsPerIncrement>48</iTurnsPerIncrement>
+				</GameTurnInfo>
+				<GameTurnInfo>
+					<iMonthIncrement>24</iMonthIncrement>
+					<iTurnsPerIncrement>45</iTurnsPerIncrement>
+				</GameTurnInfo>
+				<GameTurnInfo>
+					<iMonthIncrement>12</iMonthIncrement>
+					<iTurnsPerIncrement>86</iTurnsPerIncrement>
+				</GameTurnInfo>
+			</GameTurnInfos>
+		</GameSpeedInfo>
+		<!-- Rhye - end -->
+	</GameSpeedInfos>
+</Civ4GameSpeedInfo>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Sid Meier's Civilization 4 -->
+<!-- -->
+<!-- Game Text - Unit Upgrades for Civilopedia -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_MENU_SELECT_SEALEVEL_TITLE</Tag>
+		<English>EARTH LIKENESS</English>
+		<French>EARTH LIKENESS</French>
+		<German>EARTH LIKENESS</German>
+		<Italian>VEROSIMIGLIANZA</Italian>
+		<Spanish>EARTH LIKENESS</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MENU_SEALEVEL</Tag>
+		<English>Earth likeness:</English>
+		<French>Earth likeness :</French>
+		<German>Earth likeness:</German>
+		<Italian>Verosimiglianza:</Italian>
+		<Spanish>Earth likeness:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SEALEVEL_VERYHIGH</Tag>
+		<English>Very high</English>
+		<French>Very high</French>
+		<German>Very high</German>
+		<Italian>Molto alto</Italian>
+		<Spanish>Very high</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SEALEVEL_VERYLOW</Tag>
+		<English>Very low</English>
+		<French>Very low</French>
+		<German>Very low</German>
+		<Italian>Molto basso</Italian>
+		<Spanish>Very low</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_GOVERNOR</Tag>
+		<English>Governor</English>
+		<French>
+			<Text>Governor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Governor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Governatore</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Governor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HANDICAP_DEMIGOD</Tag>
+		<English>Demigod</English>
+		<French>
+			<Text>Demigod</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Demigod</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Semidio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Demigod</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAME_OPTION_3000BC</Tag>
+		<English>Start in 3000 BC</English>
+		<French>
+			<Text>Start in 3000 BC</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Start in 3000 BC</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Partenza nel 3000 a.C.</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Start in 3000 BC</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAME_OPTION_3000BC_HELP</Tag>
+		<English>Start in 3000 BC (Low and Very low likeness only)</English>
+		<French>
+			<Text>Start in 3000 BC (Low and Very low likeness only)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Start in 3000 BC (Low and Very low likeness only)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Partenza nel 3000 a.C. (solo per verosimiglianza bassa e molto bassa)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Start in 3000 BC (Low and Very low likeness only)</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>
