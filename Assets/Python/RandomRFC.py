@@ -1535,9 +1535,8 @@ class RandomRFC:
                                 for y in range(iGridY):                                        
                                         if (x < iAmericaWestX or x > iAmericaEastX):
                                                 pCurrent = Map.plot( x, y )
-                                                if (pCurrent.getTerrainType() == con.iPlains):
-                                                        if (pCurrent.getBonusType(-1) == con.iWine or pCurrent.getBonusType(-1) == con.iSilk):
-                                                                plotList3.append(pCurrent)
+                                                if (pCurrent.getBonusType(-1) == con.iWine or pCurrent.getBonusType(-1) == con.iSilk):
+                                                        plotList3.append(pCurrent)
                         for pCurrent in plotList3:
                                 if (pCurrent.getX() < (iEurasiaEastX-iEurasiaWestX)/2+iEurasiaWestX):
                                         pCurrent.setBonusType(con.iWine)
