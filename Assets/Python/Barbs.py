@@ -193,7 +193,7 @@ class Barbs:
                         if (iGameTurn >= con.i300AD and iGameTurn <= con.i900AD):
                                 self.spawnUnitsArea( iBarbarian, (iAfricaWestX, iAfricaSouthY), (iAfricaEastX, iAfricaNorthY), iAfricaAreaID, con.iCamelArcher, 2 + iHandicap, iGameTurn, 10, 0, utils.outerInvasion, 0)
                         if (iGameTurn >= con.i190AD and iGameTurn <= con.i1800AD):
-                                self.spawnUnitsArea( iBarbarian, (iAfricaWestX, iAfricaSouthY), (iAfricaEastX, iAfricaNorthY), iAfricaAreaID, con.iCamelArcher, 2 + iHandicap, iGameTurn, 11, 4, utils.outerInvasion, 0)
+                                self.spawnUnitsArea( iBarbarian, (iAfricaWestX, iAfricaSouthY), (iAfricaEastX, iAfricaNorthY), iAfricaAreaID, con.iCamelArcher, 2 + iHandicap, iGameTurn, 13, 4, utils.outerInvasion, 0)
 
                                 
                         #celts
@@ -204,7 +204,7 @@ class Barbs:
 
                         #norse
                         if (iGameTurn >= con.i650BC and iGameTurn <= con.i550AD):
-                                self.spawnUnits( iCeltia, (iEurasiaWestX, iNEurasiaSouthY), (iEurasiaEastX, iNEurasiaNorthY),  con.iGalley, 1, iGameTurn, 20, 0, utils.outerSeaSpawn, 2)
+                                self.spawnUnits( iCeltia, (iEurasiaWestX, iNEurasiaSouthY), (iEurasiaEastX, iNEurasiaNorthY),  con.iGalley, 1, iGameTurn, 20, 0, utils.outerCoastSpawn, 2)
                                 
                                 
                         #African natives
@@ -222,7 +222,7 @@ class Barbs:
 
                         #pirates in Mediterranean
                         if (iGameTurn >= con.i210BC and iGameTurn <= con.i50AD):
-                                self.spawnUnits( iBarbarian, (iEurasiaWestX, iSEurasiaSouthY), (iEurasiaEastX, iSEurasiaNorthY),  con.iTrireme, 1, iGameTurn, 8, 0, utils.outerSeaSpawn, 2)
+                                self.spawnUnits( iBarbarian, (iEurasiaWestX, iSEurasiaSouthY), (iEurasiaEastX, iSEurasiaNorthY),  con.iTrireme, 1, iGameTurn, 8, 0, utils.outerCoastSpawn, 2)
                                 
 
                                 
