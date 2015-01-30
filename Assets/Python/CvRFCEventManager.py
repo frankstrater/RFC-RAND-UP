@@ -6,6 +6,9 @@ import CvEventManager
 import CvRFCEventHandler
 import RiseAndFall
 import Congresses
+# Fierabras start
+import Civ4lerts
+# Fierabras end
 
 class CvRFCEventManager(CvEventManager.CvEventManager, object):
 
@@ -66,7 +69,9 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
         CvRFCEventHandler.CvRFCEventHandler(self)
         self.rnf = RiseAndFall.RiseAndFall()
         self.cong = Congresses.Congresses()
-        
+        # Fierabras start
+        Civ4lerts.Civ4lerts(self)
+        # Fierabras end
 
     def addEventHandler(self, eventType, eventHandler):
         """Adds a handler for the given event type.
