@@ -1835,15 +1835,30 @@ class RiseAndFall:
 
                                 
         def revealSurroundings(self, iCiv, tCapital):
+
+                # Fierabras start
+
+                #for iX in range(tCapital[0]-2,tCapital[0]+3):
+                #        for iY in range(tCapital[1]-2,tCapital[1]+3):
+                #                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
+                #for iX in range(tCapital[0]-1,tCapital[0]+2):
+                #        for iY in range(tCapital[1]-3,tCapital[1]+4,6):
+                #                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
+                #for iX in range(tCapital[0]-3,tCapital[0]+4,6):
+                #        for iY in range(tCapital[1]-1,tCapital[1]+2):
+                #                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
+
+                for iX in range(tCapital[0]-3,tCapital[0]+4):
+                        for iY in range(tCapital[1]-3,tCapital[1]+4):
+                                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
                 for iX in range(tCapital[0]-2,tCapital[0]+3):
+                        for iY in range(tCapital[1]-4,tCapital[1]+5,8):
+                                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
+                for iX in range(tCapital[0]-4,tCapital[0]+5,8):
                         for iY in range(tCapital[1]-2,tCapital[1]+3):
                                 gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
-                for iX in range(tCapital[0]-1,tCapital[0]+2):
-                        for iY in range(tCapital[1]-3,tCapital[1]+4,6):
-                                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
-                for iX in range(tCapital[0]-3,tCapital[0]+4,6):
-                        for iY in range(tCapital[1]-1,tCapital[1]+2):
-                                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
+
+                # Fierabras end
 
 
         def deleteMode(self, iCurrentPlayer):
