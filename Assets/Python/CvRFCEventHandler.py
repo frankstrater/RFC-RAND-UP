@@ -14,7 +14,7 @@ import StoredData
 import RiseAndFall        
 import Barbs                
 import Religions        
-# import Resources        # Tweaked - not used
+import Resources        
 import CityNameManager  
 import UniquePowers     
 import AIWars           
@@ -181,7 +181,7 @@ class CvRFCEventHandler:
                 self.rnf = RiseAndFall.RiseAndFall()
                 self.barb = Barbs.Barbs()
                 self.rel = Religions.Religions()
-                # self.res = Resources.Resources()	# Tweaked - not used
+                self.res = Resources.Resources()
                 self.cnm = CityNameManager.CityNameManager()
                 self.up = UniquePowers.UniquePowers()
                 self.aiw = AIWars.AIWars()
@@ -857,8 +857,7 @@ class CvRFCEventHandler:
                                                 if (Map.plot(iX,iY).getBonusType(-1) == 35):
                                                         print(iX,iY,Map.plot(iX,iY).getBonusType(-1))
                         print("BONUS")
-                        # for iBonus in range(36):
-                        for iBonus in range(35):
+                        for iBonus in range(36):
                                 print(iBonus, lBonuses[iBonus])
 
                         #print(gc.getPlayer(con.iRome).getCurrentEra())
