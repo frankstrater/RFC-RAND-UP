@@ -31,6 +31,7 @@ http://forums.civfanatics.com/showthread.php?t=239221
 ### Typos
 
 Civ4GameText_UP.xml - "Burocracy" changed to "Bureacracy"
+
 CvRandomEventInterface.py - "getHelpThGoths1" changed to "getHelpTheGoths1"
 
 ### Tweaked
