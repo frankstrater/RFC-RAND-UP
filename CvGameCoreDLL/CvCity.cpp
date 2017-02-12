@@ -5446,7 +5446,7 @@ int CvCity::getGreatPeopleRate() const
 	if (getOwnerINLINE() == GREECE) {
 		//Rhye - start UP
 		if (GET_PLAYER(getOwnerINLINE()).getCurrentEra() <= 2)
-			result = (baseValue*250/100);
+			result = (baseValue*200/100);
 		//Rhye - end UP
 	}
 	//switch used to be here, now in CvPlayer::greatPeopleThreshold()
