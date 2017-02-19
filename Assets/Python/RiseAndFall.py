@@ -439,7 +439,7 @@ class RiseAndFall:
                         for iMaster in range(con.iNumPlayers):
                                 if (gc.getTeam(gc.getPlayer(self.getNewCiv()).getTeam()).isVassal(iMaster)):
                                         gc.getTeam(gc.getPlayer(self.getNewCiv()).getTeam()).setVassal(iMaster, False, False)
-                        self.setAlreadySwitched(True)
+                        self.setAlreadySwitched(1)
                         gc.getPlayer(self.getNewCiv()).setPlayable(True)
                         #CyInterface().addImmediateMessage("first button", "")
                 #elif( popupReturn.getButtonClicked() == 1 ): # 2nd button
@@ -3156,7 +3156,7 @@ class RiseAndFall:
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 1)
                         utils.makeUnit(con.iWarrior, iCiv, tPlot, 2)
                         utils.makeUnit(con.iGreekPhalanx, iCiv, tPlot, 1) #3
-                        #pGreece.initUnit(con.iGreekPhalanx, tPlot[0], tPlot[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+                        pGreece.initUnit(con.iGreekPhalanx, tPlot[0], tPlot[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
                         #pGreece.initUnit(con.iGreekPhalanx, tPlot[0], tPlot[1], UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.DIRECTION_SOUTH) #RFCRAND
                         tSeaPlot = self.findSeaPlots(tPlot, 2, iCiv)
                         if (tSeaPlot):
@@ -4217,12 +4217,12 @@ class RiseAndFall:
                         teamGreece.setHasTech(con.iPolytheism, True, iCiv, False, False)
                         teamGreece.setHasTech(con.iFishing, True, iCiv, False, False)
                         teamGreece.setHasTech(con.iSailing, True, iCiv, False, False)
-                        teamGreece.setHasTech(con.iTheWheel, True, iCiv, False, False)
+                        #teamGreece.setHasTech(con.iTheWheel, True, iCiv, False, False)
                         teamGreece.setHasTech(con.iPottery, True, iCiv, False, False)
                         teamGreece.setHasTech(con.iWriting, True, iCiv, False, False)
                         #teamGreece.setHasTech(con.iAlphabet, True, iCiv, False, False)
                         #teamGreece.setHasTech(con.iLiterature, True, iCiv, False, False)
-                        teamGreece.setHasTech(con.iHunting, True, iCiv, False, False) #RFCRAND
+                        #teamGreece.setHasTech(con.iHunting, True, iCiv, False, False) #RFCRAND
                 if (iCiv == iPersia):
                         teamPersia.setHasTech(con.iMining, True, iCiv, False, False)
                         teamPersia.setHasTech(con.iBronzeWorking, True, iCiv, False, False)
