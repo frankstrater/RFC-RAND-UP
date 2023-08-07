@@ -1494,7 +1494,7 @@ class Victory:
                                 #if (city.getX() >= tAmericasTL[0] and city.getX() <= tAmericasBR[0] and city.getY() >= tAmericasTL[1] and city.getY() <= tAmericasBR[1]):
                                 area = city.area()
                                 if (area.getNumTiles() >= 100 and utils.isNewWorld(city.getX(),city.getY())): #we should count only the main land
- ##                                        bFirst = True
+##                                        bFirst = True
 ##                                        for iCiv in range(iNumPlayers):
 ##                                                if ((iCiv != iVikings) and (iCiv not in con.lCivGroups[5])):
 ##                                                        if (self.checkNotOwnedArea(iCiv, tAmericasTL, tAmericasBR) == False):
@@ -1647,12 +1647,12 @@ class Victory:
                                                         if (playerType == iBarbarian):
                                                                 self.setGoal(iRome, 2, 0)
 
-                elif (iPlayer == iJapan):
-                        if (pJapan.isAlive()):
-                                if (bConquest):
-                                        if (self.getGoal(iJapan, 2) == -1):
-                                                if (iGameTurn <= i1850AD):
-                                                        self.setGoal(iJapan, 2, 0)
+##                elif (iPlayer == iJapan):
+##                        if (pJapan.isAlive()):
+##                                if (bConquest):
+##                                        if (self.getGoal(iJapan, 2) == -1):
+##                                                if (iGameTurn <= i1850AD):
+##                                                        self.setGoal(iJapan, 2, 0)
 
 
                 elif (iPlayer == iMaya):
