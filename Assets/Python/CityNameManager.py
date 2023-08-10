@@ -903,7 +903,7 @@ tCityLists = (
 "-1"
 ),(
 "Qu&#233;bec", #(1608)
-"B&#226;ton-Rouge", #(1699) Tweaked
+"B&#226;ton-Rouge", #(1699)
 "St.Louis", #(1703)
 "Fort D&#233;troit", #(1701)
 "Tadoussac", #(1599)
@@ -1311,7 +1311,7 @@ tCityLists = (
 "Bragan&#231;a",
 "&#201;vora",
 #"Silves",
-"Santar&#233;m", # Tweaked
+"Santar&#233;m",
 "Leiria",
 "Viseu",
 "Lamego",
@@ -3134,7 +3134,7 @@ class CityNameManager:
                         elif sName == 'Willkapampa':
                                 city.setName('Vilcabamba', False)
                         elif sName == 'Wantar Chawin':
-                                city.setName('Chav&#237;n de Hu&#225;ntar', False) # Tweaked
+                                city.setName('Chav&#237;n de Hu&#225;ntar', False)
                         elif sName == 'Punu':
                                 city.setName('Puno', False)	
                         elif (sName == 'G&#234;nes' or sName == 'Genua'):
@@ -4235,7 +4235,7 @@ class CityNameManager:
                         elif sName == 'Willkapampa':
                                 city.setName('Vilcabamba', False)
                         elif sName == 'Wantar Chawin':
-                                city.setName('Chav&#237;n de Hu&#225;ntar', False) # Tweaked
+                                city.setName('Chav&#237;n de Hu&#225;ntar', False)
                         elif sName == 'Punu':
                                 city.setName('Puno', False)	
 
