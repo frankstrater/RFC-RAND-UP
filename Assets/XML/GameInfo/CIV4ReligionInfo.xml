@@ -14,7 +14,7 @@
 			<TechPrereq>TECH_MONOTHEISM</TechPrereq>
 			<FreeUnitClass>UNITCLASS_JEWISH_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
-			<iSpreadFactor>70</iSpreadFactor> <!-- Rhye -->
+			<iSpreadFactor>50</iSpreadFactor> <!-- Rhye -->
 			<GlobalReligionCommerces>
 				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
 				<iGlobalReligionCommerce>0</iGlobalReligionCommerce>
@@ -47,7 +47,7 @@
 			<TechPrereq>TECH_THEOLOGY</TechPrereq>
 			<FreeUnitClass>UNITCLASS_CHRISTIAN_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>1</iFreeUnits>
-			<iSpreadFactor>100</iSpreadFactor> <!-- 100 Rhye RFCRAND -->
+			<iSpreadFactor>120</iSpreadFactor> <!-- 100 Rhye RFCRAND -->
 			<GlobalReligionCommerces>
 				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
 				<iGlobalReligionCommerce>0</iGlobalReligionCommerce>
