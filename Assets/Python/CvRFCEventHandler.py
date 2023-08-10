@@ -14,7 +14,7 @@ import StoredData
 import RiseAndFall        
 import Barbs                
 import Religions        
-# import Resources        # Tweaked - not used
+import Resources        
 import CityNameManager  
 import UniquePowers     
 import AIWars           
@@ -181,7 +181,7 @@ class CvRFCEventHandler:
                 self.rnf = RiseAndFall.RiseAndFall()
                 self.barb = Barbs.Barbs()
                 self.rel = Religions.Religions()
-                # self.res = Resources.Resources()	# Tweaked - not used
+                self.res = Resources.Resources()
                 self.cnm = CityNameManager.CityNameManager()
                 self.up = UniquePowers.UniquePowers()
                 self.aiw = AIWars.AIWars()
