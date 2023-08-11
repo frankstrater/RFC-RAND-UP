@@ -10,7 +10,7 @@ terrain generated is very different from the standard one, and is limited by som
 
 ## Installation
 
-- Extract the files contained in the zip in
+- Extract the files contained in the zip
 - Copy and paste the Rhye’s and Fall RAND folder in ...your Civ4 folder...\BTS\Mods\
 - Start Civilization, go to ADVANCED , then LOAD A MOD , select Rhye’s and Fall RAND
 - After the mod loads, choose PLAY NOW!, Rhyes_Terra, and then you can set your preferences
