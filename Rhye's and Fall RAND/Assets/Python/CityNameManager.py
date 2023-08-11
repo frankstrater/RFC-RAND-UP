@@ -903,7 +903,7 @@ tCityLists = (
 "-1"
 ),(
 "Qu&#233;bec", #(1608)
-"B&#226;ton-Rouge", #(1699)
+"Bâton-Rouge", #(1699)
 "St.Louis", #(1703)
 "Fort D&#233;troit", #(1701)
 "Tadoussac", #(1599)
@@ -1311,7 +1311,7 @@ tCityLists = (
 "Bragan&#231;a",
 "&#201;vora",
 #"Silves",
-"Santar&#233;m",
+"Santarém",
 "Leiria",
 "Viseu",
 "Lamego",
@@ -1386,7 +1386,7 @@ tCityLists = (
 "D&#237;li",# (in Timor-Leste)
 #"Vit&#243;ria",
 "Rio Grande de S&#227;o Pedro",#pampa in south brazil
-"Bissau",#Guin&#233;-Bissau
+"Bissau",#Guiné-Bissau
 "Louren&#231;o Marques",# (Maputo in Mo&#231;ambique)
 "Dam&#227;o",# (Daman in India)
 #Some important coastal cities, conquered/developed/occupied but not founded by the portuguese:
@@ -3134,7 +3134,7 @@ class CityNameManager:
                         elif sName == 'Willkapampa':
                                 city.setName('Vilcabamba', False)
                         elif sName == 'Wantar Chawin':
-                                city.setName('Chav&#237;n de Hu&#225;ntar', False)
+                                city.setName('Chavín de Hu&#225;ntar', False)								
                         elif sName == 'Punu':
                                 city.setName('Puno', False)	
                         elif (sName == 'G&#234;nes' or sName == 'Genua'):
@@ -4235,7 +4235,7 @@ class CityNameManager:
                         elif sName == 'Willkapampa':
                                 city.setName('Vilcabamba', False)
                         elif sName == 'Wantar Chawin':
-                                city.setName('Chav&#237;n de Hu&#225;ntar', False)
+                                city.setName('Chavín de Hu&#225;ntar', False)								
                         elif sName == 'Punu':
                                 city.setName('Puno', False)	
 
@@ -4300,7 +4300,7 @@ class CityNameManager:
 ##                                city.setName('Jauja', False)
 ##                        elif sName == 'Vilcabamba':
 ##                                city.setName('Willkapampa', False)
-##                        elif sName == 'Chav&#237;n de Hu&#225;ntar':
+##                        elif sName == 'Chavín de Hu&#225;ntar':
 ##                                city.setName('Wantar Chawin', False)								
 ##                        elif sName == 'Puno':
 ##                                city.setName('Punu', False)	

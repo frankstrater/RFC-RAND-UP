@@ -466,8 +466,6 @@
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
 				<CivicType>CIVIC_PAGANISM</CivicType>
-				<!-- Rhye -->
-				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -1931,8 +1929,6 @@
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
 				<CivicType>CIVIC_PAGANISM</CivicType>
-				<!-- Rhye -->
-				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -3329,7 +3325,6 @@
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
 				<CivicType>CIVIC_PAGANISM</CivicType>
-				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3420,7 +3415,6 @@
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
 				<CivicType>CIVIC_PAGANISM</CivicType>
-				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
 			<Leaders>
@@ -3520,7 +3514,6 @@
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
 				<CivicType>CIVIC_PAGANISM</CivicType>
-				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
 			<Leaders>

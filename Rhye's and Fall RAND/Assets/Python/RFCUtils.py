@@ -1104,7 +1104,7 @@ class RFCUtils:
                 bPaint = True
                 bContinue = True
                 pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-                if ( pCurrent.isWater() and pCurrent.getFeatureType() != con.iSeaIce): #RFCRAND
+                if ( pCurrent.isWater() and not pCurrent.getFeatureType() != con.iSeaIce): #RFCRAND
                         if ( not pCurrent.isCity() and not pCurrent.isUnit() and pCurrent.area().getNumTiles() > 10):
                                 if (pCurrent.countTotalCulture() == 0 ):
                                         iClean = 0

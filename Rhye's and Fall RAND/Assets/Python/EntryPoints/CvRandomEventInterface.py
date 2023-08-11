@@ -2111,7 +2111,7 @@ def canTriggerTheGoths(argsList):
 	return false
 					
 
-def getHelpTheGoths1(argsList):
+def getHelpThGoths1(argsList):
 	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
 	

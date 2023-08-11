@@ -1835,30 +1835,15 @@ class RiseAndFall:
 
                                 
         def revealSurroundings(self, iCiv, tCapital):
-
-                # Fierabras start
-
-                #for iX in range(tCapital[0]-2,tCapital[0]+3):
-                #        for iY in range(tCapital[1]-2,tCapital[1]+3):
-                #                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
-                #for iX in range(tCapital[0]-1,tCapital[0]+2):
-                #        for iY in range(tCapital[1]-3,tCapital[1]+4,6):
-                #                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
-                #for iX in range(tCapital[0]-3,tCapital[0]+4,6):
-                #        for iY in range(tCapital[1]-1,tCapital[1]+2):
-                #                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
-
-                for iX in range(tCapital[0]-3,tCapital[0]+4):
-                        for iY in range(tCapital[1]-3,tCapital[1]+4):
-                                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
                 for iX in range(tCapital[0]-2,tCapital[0]+3):
-                        for iY in range(tCapital[1]-4,tCapital[1]+5,8):
-                                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
-                for iX in range(tCapital[0]-4,tCapital[0]+5,8):
                         for iY in range(tCapital[1]-2,tCapital[1]+3):
                                 gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
-
-                # Fierabras end
+                for iX in range(tCapital[0]-1,tCapital[0]+2):
+                        for iY in range(tCapital[1]-3,tCapital[1]+4,6):
+                                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
+                for iX in range(tCapital[0]-3,tCapital[0]+4,6):
+                        for iY in range(tCapital[1]-1,tCapital[1]+2):
+                                gc.getMap().plot( iX, iY ).setRevealed(iCiv, True, True, -1);
 
 
         def deleteMode(self, iCurrentPlayer):
@@ -2140,8 +2125,8 @@ class RiseAndFall:
                                         #if (pCurrent.getPlotCity().getOwner() != iCiv):
                                         iOwner = pCurrent.getPlotCity().getOwner()
                                         if (iOwner != iCiv and (gc.getGame().getGameTurn() >= gc.getPlayer(iOwner).getBirthTurn() + 30 or gc.getPlayer(iOwner).getNumCities() >= 6)): #RFCRAND
-                                                #if (x != utils.getJerusalemLocation(0) or y != utils.getJerusalemLocation(1)):
-                                                cityList.append(pCurrent.getPlotCity())
+                                                if (x != utils.getJerusalemLocation(0) or y != utils.getJerusalemLocation(1)):
+                                                        cityList.append(pCurrent.getPlotCity())
 
                 #Exceptions
                 #RFCRAND
@@ -2387,7 +2372,7 @@ class RiseAndFall:
                 for x in range(tCoords[0] - iRange, tCoords[0] + iRange+1):        
                         for y in range(tCoords[1] - iRange, tCoords[1] + iRange+1):	
                                 pCurrent = gc.getMap().plot( x, y )
-                                if ( pCurrent.isWater() and pCurrent.getTerrainType() == con.iCoast ):
+                                if ( pCurrent.isWater()):
                                         if ( not pCurrent.isUnit() ):
                                                 #if (pCurrent.countTotalCulture() == 0 ):
                                                 if (not (pCurrent.isOwned() and pCurrent.getOwner() != iCiv)):
@@ -2439,7 +2424,7 @@ class RiseAndFall:
                                 result = cityList[rndNum]
                                 if (result):
                                         tCityPlot = (result.getX(), result.getY())
-                                        tPlot = self.findSeaPlots(tCityPlot, 2, iCiv)
+                                        tPlot = self.findSeaPlots(tCityPlot, 1, iCiv)
                                         if (tPlot):
                                                 gc.getPlayer(iCiv).initUnit(con.iGalley, tPlot[0], tPlot[1], UnitAITypes.UNITAI_ASSAULT_SEA, DirectionTypes.DIRECTION_SOUTH)
                                                 if (teamCiv.isHasTech(con.iCivilService)):
@@ -2467,7 +2452,7 @@ class RiseAndFall:
                 if (pCiv.isAlive() and pCiv.isHuman() == False):
                         capital = gc.getPlayer(iCiv).getCapitalCity()
                         tCapital = (capital.getX(), capital.getY())
-                        tSeaPlot = self.findSeaPlots(tCapital, 2, iCiv)
+                        tSeaPlot = self.findSeaPlots(tCapital, 1, iCiv)
                         if (tSeaPlot):
                                 gc.getPlayer(iCiv).initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
                                 utils.makeUnit(con.iSettler, iCiv, tSeaPlot, 1)
@@ -2502,7 +2487,7 @@ class RiseAndFall:
                                 result = cityList[rndNum]
                                 if (result):
                                         tCityPlot = (result.getX(), result.getY())
-                                        tPlot = self.findSeaPlots(tCityPlot, 2, iCiv)
+                                        tPlot = self.findSeaPlots(tCityPlot, 1, iCiv)
                                         if (tPlot == None):
                                                 tPlot = tCityPlot
                                         if (iCiv == iNetherlands):
@@ -3141,7 +3126,7 @@ class RiseAndFall:
                         utils.makeUnit(utils.bestUnitCounter(iCiv), iCiv, tPlot, iNumUnitCounter)
                         utils.makeUnit(utils.bestUnitMounted(iCiv), iCiv, tPlot, iNumUnitMounted)
                         utils.makeUnit(utils.bestUnitSiege(iCiv), iCiv, tPlot, iNumUnitSiege)
-                        tSeaPlot = self.findSeaPlots(tPlot, 2, iCiv)
+                        tSeaPlot = self.findSeaPlots(tPlot, 1, iCiv)
                         if (tSeaPlot):
                                 utils.makeUnit(con.iWorkBoat, iCiv, tSeaPlot, iNumUnitSeaWorker)
                                 for loop in range(iNumUnitSeaTransport):
@@ -3158,7 +3143,7 @@ class RiseAndFall:
                         utils.makeUnit(con.iGreekPhalanx, iCiv, tPlot, 1) #3
                         pGreece.initUnit(con.iGreekPhalanx, tPlot[0], tPlot[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
                         #pGreece.initUnit(con.iGreekPhalanx, tPlot[0], tPlot[1], UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.DIRECTION_SOUTH) #RFCRAND
-                        tSeaPlot = self.findSeaPlots(tPlot, 2, iCiv)
+                        tSeaPlot = self.findSeaPlots(tPlot, 1, iCiv)
                         if (tSeaPlot):
                                 #utils.makeUnit(con.iWorkBoat, iCiv, tSeaPlot, 1)
                                 pGreece.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -3174,7 +3159,7 @@ class RiseAndFall:
                         utils.makeUnit(con.iArcher, iCiv, tPlot, 3)
                         utils.makeUnit(con.iSpearman, iCiv, tPlot, 2)
                         utils.makeUnit(con.iCarthageNumidianCavalry, iCiv, tPlot, 3)
-                        tSeaPlot = self.findSeaPlots(tPlot, 2, iCiv)
+                        tSeaPlot = self.findSeaPlots(tPlot, 1, iCiv)
                         if (tSeaPlot):                                
                                 utils.makeUnit(con.iWorkBoat, iCiv, tSeaPlot, 2)
                                 pCarthage.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -3186,7 +3171,7 @@ class RiseAndFall:
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(con.iArcher, iCiv, tPlot, 3)
                         utils.makeUnit(con.iRomePraetorian, iCiv, tPlot, 4)
-                        tSeaPlot = self.findSeaPlots(tPlot, 2, iCiv)
+                        tSeaPlot = self.findSeaPlots(tPlot, 1, iCiv)
                         if (tSeaPlot):                                
                                 utils.makeUnit(con.iWorkBoat, iCiv, tSeaPlot, 1)
                                 pRome.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ASSAULT_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -3195,7 +3180,7 @@ class RiseAndFall:
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(con.iArcher, iCiv, tPlot, 1) #2 RFCRAND
                         utils.makeUnit(con.iSwordsman, iCiv, tPlot, 1) #2 RFCRAND
-                        tSeaPlot = self.findSeaPlots(tPlot, 2, iCiv)
+                        tSeaPlot = self.findSeaPlots(tPlot, 1, iCiv)
                         if (tSeaPlot):                                
                                 utils.makeUnit(con.iWorkBoat, iCiv, tSeaPlot, 2)
                 if (iCiv == iEthiopia):
@@ -3217,7 +3202,7 @@ class RiseAndFall:
                         utils.makeUnit(con.iScout, iCiv, tPlot, 1)
                         pVikings.initUnit(con.iSwordsman, tPlot[0], tPlot[1], UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.DIRECTION_SOUTH)
                         utils.makeUnit(con.iSwordsman, iCiv, tPlot, 1)
-                        tSeaPlot = self.findSeaPlots(tPlot, 2, iCiv)
+                        tSeaPlot = self.findSeaPlots(tPlot, 1, iCiv)
                         if (tSeaPlot):                                
                                 utils.makeUnit(con.iWorkBoat, iCiv, tSeaPlot, 1)
                                 pVikings.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -3256,7 +3241,7 @@ class RiseAndFall:
                 if (iCiv == iEngland):
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 3)
                         utils.makeUnit(con.iLongbowman, iCiv, tPlot, 3)
-                        tSeaPlot = self.findSeaPlots(tPlot, 2, iCiv)
+                        tSeaPlot = self.findSeaPlots(tPlot, 1, iCiv)
                         if (tSeaPlot):                                
                                 utils.makeUnit(con.iWorkBoat, iCiv, tSeaPlot, 2)
                                 pEngland.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -3278,7 +3263,7 @@ class RiseAndFall:
                         utils.makeUnit(con.iLongbowman, iCiv, tPlot, 2)
                         utils.makeUnit(con.iCrossbowman, iCiv, tPlot, 2)
                         utils.makeUnit(con.iPikeman, iCiv, tPlot, 2)
-                        tSeaPlot = self.findSeaPlots(tPlot, 2, iCiv)
+                        tSeaPlot = self.findSeaPlots(tPlot, 1, iCiv)
                         if (tSeaPlot):                                
                                 utils.makeUnit(con.iWorkBoat, iCiv, tSeaPlot, 2)
                                 pHolland.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -3300,7 +3285,7 @@ class RiseAndFall:
                         utils.makeUnit(con.iLongbowman, iCiv, tPlot, 2)
                         utils.makeUnit(con.iCrossbowman, iCiv, tPlot, 2)
                         utils.makeUnit(con.iPikeman, iCiv, tPlot, 2)
-                        tSeaPlot = self.findSeaPlots(tPlot, 2, iCiv)
+                        tSeaPlot = self.findSeaPlots(tPlot, 1, iCiv)
                         if (tSeaPlot):                                
                                 utils.makeUnit(con.iWorkBoat, iCiv, tSeaPlot, 2)
                                 pPortugal.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -3331,7 +3316,7 @@ class RiseAndFall:
                         utils.makeUnit(con.iRifleman, iCiv, tPlot, 4)
                         utils.makeUnit(con.iCannon, iCiv, tPlot, 2)
                         self.addMissionary(iCiv, (tPlot[0]-6, tPlot[1]-6), (tPlot[0]+6, tPlot[1]+6), tPlot, 1)
-                        tSeaPlot = self.findSeaPlots(tPlot, 2, iCiv)
+                        tSeaPlot = self.findSeaPlots(tPlot, 1, iCiv)
                         if (tSeaPlot):  
                                 utils.makeUnit(con.iWorkBoat, iCiv, tSeaPlot, 2)
                                 utils.makeUnit(con.iGalleon, iCiv, tSeaPlot, 2)
