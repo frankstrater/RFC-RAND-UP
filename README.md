@@ -10,10 +10,11 @@ terrain generated is very different from the standard one, and is limited by som
 
 ## Installation
 
-- Extract the files contained in the zip in ...your Civ4 folder...\BTS\Mods\
+- Extract the files contained in the zip in
+- Copy and paste the Rhye’s and Fall RAND folder in ...your Civ4 folder...\BTS\Mods\
 - Start Civilization, go to ADVANCED , then LOAD A MOD , select Rhye’s and Fall RAND
 - After the mod loads, choose PLAY NOW!, Rhyes_Terra, and then you can set your preferences
-- WARNING : if you want to use CUSTOM GAME, please read carefully the "Custom Game" paragraph at the bottom of this document.
+- WARNING: if you want to use CUSTOM GAME, please read carefully the "Custom Game" paragraph at the bottom of this document.
 - Map generation takes a while, so be patient
 
 ## World size
@@ -140,7 +141,7 @@ Some historical goals had to be readapted. Check Civilopedia for details.All you
 
 With high or medium Earth likeness, it’s the group of landmasses in the zone of the world corresponding to North and South America, where Aztecs, Maya and Inca always spawn.
 
-With low likeness, it depends on the position of the continents: when there’s a biggest world, and two other small continents, these two are considered “new world”; when there’s a biggest world, a medium-sized world and a small continent, it’s the medium-sized world; when there are three continents of the same size, it’s one of the three (usually the one where there’s at least one native American civ, but it may be more crowded: you can tell it by checking if the conquerors event was triggered). You can always press SHIFT+ALT+W once you have researched Compass if you are unsure about which continents are the new world.
+With low likeness, it depends on the position of the continents: when there’s a biggest world, and two other small continents, these two are considered "new world"; when there’s a biggest world, a medium-sized world and a small continent, it’s the medium-sized world; when there are three continents of the same size, it’s one of the three (usually the one where there’s at least one native American civ, but it may be more crowded: you can tell it by checking if the conquerors event was triggered). You can always press SHIFT+ALT+W once you have researched Compass if you are unsure about which continents are the new world.
 
 However, due to the randomness of the world generation, it may happen that some goals, in some maps, are materially impossible. For this fact, Historical Victories were disabled on very low.
 
@@ -154,3 +155,4 @@ If you want to use the CUSTOM GAME option, please don’t touch the list of the 
 enable and disable game options and victory conditions). As RFC uses its own team numbers, changing those slots may cause crashes or weird behaviours.
 
 "Start in 3000 BC" option works only in Low and Very Low likeness.
+	
