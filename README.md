@@ -1,8 +1,5 @@
 # Rhye's and Fall of Civilization RAND
 
-```
-Updated to v1.27
-```
 Rhye's and Fall RAND is a project that tries to offer something halfway between RFC and
 standard Civ. All the great additions of RFC, such as stability, historical spawn dates, congresses,
 victory conditions and the UPs are in. However, certain adjustments were necessary, and the
