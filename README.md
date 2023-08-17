@@ -20,6 +20,8 @@ There are three world sizes. They can hold 15, 21 and 27 civs (plus minor civs).
 
 ## Terrrain generator enhancements
 
+![terrain pattern](images/pattern.png)
+
 Rhyes_Terra is based on other generators such as Terra.py. Its enhancements include:
 
 - The addition of marshes
@@ -30,9 +32,9 @@ Rhyes_Terra is based on other generators such as Terra.py. Its enhancements incl
 - Variable equator position (to allow a more comfortable northern or southern hemisphere)
 - Presence of a minimum distance of 5-6 plots from different groups of continents, which is enough to make communications impossible until Renaissance
 
-![terrain pattern](images/pattern.png)
-
 ## Earth likeness
+
+![earth mass](images/mass.png)
 
 This parameter of the world setup sets how much the world generated is similar to the Earth.
 
@@ -106,9 +108,9 @@ This parameter of the world setup sets how much the world generated is similar t
 - Civ spawn dates are totally random. Starting units, technologies and hidden modifiers are rescaled to the new date as well.
 - Unique Historical Victories are disabled.
 
-![earth mass](images/mass.png)
-
 ## Starting locations
+
+![starting location](images/SL.png)
 
 While we have fixed starting locations in RFC and totally random locations in standard Civ, RFC RAND features some additional code that makes certain terrain types more important than others, depending on the civ. The Egyptians have high modifiers for desert, rivers and a certain range of latitude (those latitudes are shifted when climate is different than temperate).
 
@@ -120,8 +122,6 @@ decreased.
 This means that when you're playing, you don't know WHERE a new civ will spawn. As Rome, Germany may spawn next to you, and flip some of your cities, or next to France or Spain, and not
 affect you at all. America is a special case, since it is supposed to spawn in America, and close to some European
 city. Of course, even less is known in very low likeness, as spawn dates are totally random.
-
-![starting location](images/SL.png)
 
 ## City names management
 
