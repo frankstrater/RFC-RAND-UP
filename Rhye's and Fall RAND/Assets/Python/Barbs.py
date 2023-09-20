@@ -193,7 +193,7 @@ class Barbs:
                         if (iGameTurn >= con.i300AD and iGameTurn <= con.i900AD):
                                 self.spawnUnitsArea( iBarbarian, (iAfricaWestX, iAfricaSouthY), (iAfricaEastX, iAfricaNorthY), iAfricaAreaID, con.iCamelArcher, 2 + iHandicap, iGameTurn, 10, 0, utils.outerInvasion, 0)
                         if (iGameTurn >= con.i190AD and iGameTurn <= con.i1800AD):
-                                self.spawnUnitsArea( iBarbarian, (iAfricaWestX, iAfricaSouthY), (iAfricaEastX, iAfricaNorthY), iAfricaAreaID, con.iCamelArcher, 2 + iHandicap, iGameTurn, 13, 4, utils.outerInvasion, 0)
+                                self.spawnUnitsArea( iBarbarian, (iAfricaWestX, iAfricaSouthY), (iAfricaEastX, iAfricaNorthY), iAfricaAreaID, con.iCamelArcher, 2 + iHandicap, iGameTurn, 11, 4, utils.outerInvasion, 0)
 
                                 
                         #celts
