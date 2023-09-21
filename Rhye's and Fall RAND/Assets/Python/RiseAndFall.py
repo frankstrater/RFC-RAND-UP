@@ -3162,7 +3162,7 @@ class RiseAndFall:
                         if (tSeaPlot):
                                 #utils.makeUnit(con.iWorkBoat, iCiv, tSeaPlot, 1)
                                 pGreece.initUnit(con.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
-                                utils.makeUnit(con.iSettler, iCiv, tSeaPlot, 1)
+                                #utils.makeUnit(con.iSettler, iCiv, tSeaPlot, 1)
                                 utils.makeUnit(con.iWarrior, iCiv, tSeaPlot, 1)
                 if (iCiv == iPersia):
                         utils.makeUnit(con.iSettler, iCiv, tPlot, 3)  #2 RFCRAND (no Susa)
@@ -4217,12 +4217,12 @@ class RiseAndFall:
                         teamGreece.setHasTech(con.iPolytheism, True, iCiv, False, False)
                         teamGreece.setHasTech(con.iFishing, True, iCiv, False, False)
                         teamGreece.setHasTech(con.iSailing, True, iCiv, False, False)
-                        #teamGreece.setHasTech(con.iTheWheel, True, iCiv, False, False)
+                        teamGreece.setHasTech(con.iTheWheel, True, iCiv, False, False)
                         teamGreece.setHasTech(con.iPottery, True, iCiv, False, False)
                         teamGreece.setHasTech(con.iWriting, True, iCiv, False, False)
                         #teamGreece.setHasTech(con.iAlphabet, True, iCiv, False, False)
                         #teamGreece.setHasTech(con.iLiterature, True, iCiv, False, False)
-                        #teamGreece.setHasTech(con.iHunting, True, iCiv, False, False) #RFCRAND
+                        teamGreece.setHasTech(con.iHunting, True, iCiv, False, False) #RFCRAND
                 if (iCiv == iPersia):
                         teamPersia.setHasTech(con.iMining, True, iCiv, False, False)
                         teamPersia.setHasTech(con.iBronzeWorking, True, iCiv, False, False)
