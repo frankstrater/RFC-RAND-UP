@@ -1,0 +1,25 @@
+Some notes on Victory Conditions and the Atlas:
+
+- "in (year)" means you must satisfy all the requirements at the end of the specified year/turn. The
+ following turn, the condition will pass or fail.
+
+- "by (year)" means that you can satisfy the requirements any time before the end of the given year/turn.
+ The condition should be passed the turn following completion of the requirements, otherwise it will fail
+ after the given year.
+
+- "control" basically means just that. You must control (have within your cultural borders) more area in
+ the given region than the civilization of that region. There is no set number of cities. If the
+ civilization is not active, one city should be enough to satisfy the condition. (I think. Please correct
+ me if I'm wrong here.) (The Roman condition in the civilopedia is an exception and the necessary
+ requirements are shown in the atlas.)
+
+I can be contacted via forums.civfanatics.com, username: Thonnas
+Enjoy
+
+History:
+17/04/08
+- Updates to RFC BTS 1.181
+26/08/07
+- compatible with MSIE5.5+ (Umarth)
+23/08/07
+- current as of RFC for BtS version 1.07

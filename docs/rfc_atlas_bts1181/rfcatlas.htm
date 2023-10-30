@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" version="-//W3C//DTD XHTML 1.1//EN" xml:lang="en"><head>
+
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>RFC:BtS Atlas</title>
+
+	
+	<script type="text/javascript">
+		function getElementsByClass(node,searchClass,tag) {
+			var classElements = new Array();
+			var els = node.getElementsByTagName(tag);
+			var elsLen = els.length;
+			var pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)");
+			for (i = 0, j = 0; i < elsLen; i++) {
+				if ( pattern.test(els[i].className) ) {
+					classElements[j] = els[i];
+					j++;
+				}
+			}
+			return classElements;
+		}
+	
+		function setVisible(element){
+				if(document.getElementById(element+'Box').checked){
+					document.getElementById(element).style.display='inline';
+				}else{
+					document.getElementById(element).style.display='none';
+				}
+		}
+		
+		function resize(newSize){
+			document.getElementById('map').height = 1632*newSize;
+			document.getElementById('map').width = 2976*newSize;
+			
+			var overlays = getElementsByClass(document, 'overlay', '*');
+			for (i=0; i < overlays.length; i++){
+				overlays[i].width = 2976*newSize;
+				overlays[i].height = 1632*newSize;
+			}
+		}
+		
+		function displayLocal(){
+			
+			for(i=1; i<4; i++){
+				if(document.getElementById('local/'+i+'Box').checked){
+					document.getElementById('local/'+i+'Text').disabled = true;
+					document.getElementById('local/'+i).src = document.getElementById('local/'+i+'Text').value;
+					document.getElementById('local/'+i).style.display='inline';
+				}else{
+					document.getElementById('local/'+i+'Text').disabled = false;                            
+					document.getElementById('local/'+i).style.display='none';
+				}
+			}
+		}
+		
+	</script>
+	
+	<style>
+    body{margin:0; padding: 0;}
+	
+		h1{font-family:"Gill Sans", "Lucida Grande", sans-serif;}
+		h2{font-size:1.4em;font-family: "Verdana", "Lucida Grande", sans-serif;text-align:center;}
+		p{font-family:"Gill Sans", "Georgia";margin:7px 0;}
+		a:link, a:hover, a:visited, a:active{text-decoration:none;color:blue;}
+		a:hover{color:red;}
+		
+		
+		/* PNG Fix - http://www.twinhelix.com/css/iepngfix/ */
+		img { behavior: url(rfcatlas_files/iepngfix.htc); }
+		
+		#navigator{z-index:3;
+						height:100%;padding-top:2.5em;}
+		/* IE5.5 and IE6 position fixed */
+		#navigator{position:absolute;
+        top: expression((ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop) + 'px');
+        left: expression((ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft) + 'px' );
+		}
+		body > #navigator{position:fixed;
+						top:0px;left:0px;}
+		.subNavigator{background-color:white;
+			opacity:0.85;
+			filter:alpha(opacity=85);
+			border:solid 3px black;
+			border-left:none;
+			width: 145px;
+			margin-bottom: 10px;
+			padding:0 10px;
+		}
+		
+		.closeP{text-align:center;font-size:0.8em;}
+		
+		input[type=checkbox]{left:130px;position:absolute;}
+		input[type=text]{width:110px;}
+		
+		
+		.overlay{top:0px;left:0px;position:absolute;display:none;}
+		#footer{height:1.8em;background-color:white;
+        width: expression((iewidth = screen.availWidth) + 'px'); 
+				opacity:0.85;
+				filter:alpha(opacity=85);
+				border-bottom:solid 3px black;
+				margin:0;z-index:5;}
+		/* IE5.5 and IE6 position fixed */
+		#footer{position:absolute;
+        top: expression((ignoreMe3 = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop) + 'px');
+        left: expression((ignoreMe4 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft) + 'px' );
+		}
+		body > #footer{width:100%;position:fixed;
+				left:0px;top:0px;}
+		#footer p{font-size:1.0em;margin-top:0.3em;padding-left:15px;padding-right:15px;}
+		
+		#aboutBox{width:30%;					
+					background-color:white;
+					border:solid 3px black;
+					padding:10px;
+					opacity:0.85;
+					filter:alpha(opacity=85);
+					display:none;
+					z-index:6;}
+		/* IE5.5 and IE6 position fixed */
+		#aboutBox{position:absolute;
+        top: expression((100 + (ignoreMe3 = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop)) + 'px');
+        left: expression(((screen.availWidth * 0.35) + (ignoreMe4 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft)) + 'px' );
+		}
+		body > #aboutBox{min-width:350px;
+      position:fixed;
+      top:100px;left:35%;
+    }
+	</style></head><body onload="resize(0.5);">
+<img id="map" src="rfcatlas_files/Base.jpg" height="816" width="1488">
+<img id="spawns/1" class="overlay" src="rfcatlas_files/Ancient Civs.png" height="544" width="992">
+<img id="spawns/2" class="overlay" src="rfcatlas_files/Classical Civs.png" height="544" width="992">
+<img id="spawns/3" class="overlay" src="rfcatlas_files/Medieval Civs.png" height="544" width="992">
+<img id="spawns/4" class="overlay" src="rfcatlas_files/Later Civs.png" height="544" width="992">
+<img id="uhv/carthage" class="overlay" src="rfcatlas_files/Carthage UHV.png" height="544" width="992">
+<img id="uhv/rome" class="overlay" src="rfcatlas_files/Rome UHV.png" height="544" width="992">
+<img id="uhv/ethiopia" class="overlay" src="rfcatlas_files/Ethiopia UHV.png" height="544" width="992">
+<img id="uhv/arabia" class="overlay" src="rfcatlas_files/Arabia UHV.png" height="544" width="992">
+<img id="uhv/spain" class="overlay" src="rfcatlas_files/Spain UHV.png" height="544" width="992">
+<img id="uhv/france" class="overlay" src="rfcatlas_files/France UHV.png" height="544" width="992">
+<img id="uhv/england" class="overlay" src="rfcatlas_files/England UHV.png" height="544" width="992">
+<img id="uhv/germany" class="overlay" src="rfcatlas_files/Germany UHV.png" height="544" width="992">
+<img id="uhv/russia" class="overlay" src="rfcatlas_files/Russia UHV.png" height="544" width="992">
+<img id="uhv/inca" class="overlay" src="rfcatlas_files/Inca UHV.png" height="544" width="992">
+<img id="uhv/mongolia" class="overlay" src="rfcatlas_files/Mongolia UHV.png" height="544" width="992">
+<img id="uhv/aztec" class="overlay" src="rfcatlas_files/Aztec UHV.png" height="544" width="992">
+<img id="uhv/turkey" class="overlay" src="rfcatlas_files/Turkey UHV.png" height="544" width="992">
+
+
+
+<img id="local/1" class="overlay" src="" height="544" width="992">
+<img id="local/2" class="overlay" src="" height="1023" width="1873">
+<img id="local/3" class="overlay" src="" height="1023" width="1873">
+
+<div id="localFilesContainer">
+	
+</div>
+<div id="navigator">
+	<div id="coreNavigator" class="subNavigator">
+		<h2>Spawns</h2>
+		<p>Ancient civs<input id="spawns/1Box" onclick="setVisible('spawns/1');" value="0" type="checkbox"><br>
+		Classical civs<input id="spawns/2Box" onclick="setVisible('spawns/2');" value="0" type="checkbox"><br>
+		Medieval civs<input id="spawns/3Box" onclick="setVisible('spawns/3');" value="0" type="checkbox"><br>
+		Later civs<input id="spawns/4Box" onclick="setVisible('spawns/4');" value="0" type="checkbox"><br>
+		</p>
+		<p class="closeP"><a href="#" onclick="document.getElementById('coreNavigator').style.display='none';return false;">Close</a></p>
+	</div>
+	
+	<div id="uhvNavigator" class="subNavigator">
+	<h2>UHV Areas</h2>
+		<p>Carthage<input id="uhv/carthageBox" onclick="setVisible('uhv/carthage');" value="0" type="checkbox"><br>
+		Rome<input id="uhv/romeBox" onclick="setVisible('uhv/rome');" value="0" type="checkbox"><br>
+		Ethiopia<input id="uhv/ethiopiaBox" onclick="setVisible('uhv/ethiopia');" value="0" type="checkbox"><br>
+		Arabia<input id="uhv/arabiaBox" onclick="setVisible('uhv/arabia');" value="0" type="checkbox"><br>
+		Spain<input id="uhv/spainBox" onclick="setVisible('uhv/spain');" value="0" type="checkbox"><br>
+		France<input id="uhv/franceBox" onclick="setVisible('uhv/france');" value="0" type="checkbox"><br>
+		England<input id="uhv/englandBox" onclick="setVisible('uhv/england');" value="0" type="checkbox"><br>
+		Germany<input id="uhv/germanyBox" onclick="setVisible('uhv/germany');" value="0" type="checkbox"><br>
+		Russia<input id="uhv/russiaBox" onclick="setVisible('uhv/russia');" value="0" type="checkbox"><br>
+		Inca<input id="uhv/incaBox" onclick="setVisible('uhv/inca');" value="0" type="checkbox"><br>
+		Mongolia<input id="uhv/mongoliaBox" onclick="setVisible('uhv/mongolia');" value="0" type="checkbox"><br>
+		Aztec<input id="uhv/aztecBox" onclick="setVisible('uhv/aztec');" value="0" type="checkbox"><br>
+		Turkey<input id="uhv/turkeyBox" onclick="setVisible('uhv/turkey');" value="0" type="checkbox"><br>
+		</p>
+	<p class="closeP"><a href="#" onclick="document.getElementById('uhvNavigator').style.display='none';return false;">Close</a></p>
+	</div>
+	
+	<div id="localNavigator" class="subNavigator" style="display: none;">
+	<h2>Local Files</h2>
+	<p>
+	<input id="local/1Text" value="file://" type="text">	<input id="local/1Box" onclick="displayLocal();" type="checkbox">
+	<input id="local/2Text" value="file://" type="text">	<input id="local/2Box" onclick="displayLocal();" type="checkbox">
+	<input id="local/3Text" value="file://" type="text">	<input id="local/3Box" onclick="displayLocal();" type="checkbox">
+	</p>
+	<p class="closeP"><a href="#" onclick="document.getElementById('localNavigator').style.display='none';return false;">Close</a></p>
+	</div>
+	
+</div>
+
+<div id="aboutBox">
+	<div style="float: left; width: 60%;">
+	<h1>Atlas for <br>Rhye's and Fall of Civilisation: BtS v1.181</h1>
+	</div>
+	<div style="float: right; width: 38%; margin-top: 2%;">
+	<p>Updated to v1.181 by <a href="http://forums.civfanatics.com/member.php?u=139685">Sedna17</a></p>
+	<p>Updated for BtS by <a href="http://forums.civfanatics.com/member.php?u=88710">Thonnas</a></p>
+	<p>Machinery by <a href="http://forums.civfanatics.com/member.php?u=95723">Zetetic</a></p>
+		
+	<p>Compatability:
+      <br />Firefox
+      <br />MSIE 5.5+
+      <br />Opera</p>
+	<p style="text-align: center; font-weight: bold; margin-top: 12px;"><a href="#" onclick="document.getElementById('aboutBox').style.display='none';return false;">Close</a></p>
+	</div>
+</div>
+
+<div id="footer">
+	<div style="float: left;">
+	<p style="text-align: left;">
+		<a href="#" onclick="document.getElementById('aboutBox').style.display='inline';return false;" style="font-style: oblique;">About</a> | 
+		<a href="#" onclick="document.getElementById('coreNavigator').style.display='block';return false;">Spawns</a> | 
+		<a href="#" onclick="document.getElementById('uhvNavigator').style.display='block';return false;">UHVs</a> | 
+		<a href="#" onclick="document.getElementById('localNavigator').style.display='block';return false;">Local</a>
+		| <a href="rfcatlas_files/atlas_notes.txt">Notes</a>
+	</p>
+	</div>
+	<div style="float: right;position:relative;">
+		<p style="text-align: right;"><b>Zoom:</b> <a href="#" onclick="javascript:resize(0.33);return false;">33%</a> | <a href="#" onclick="javascript:resize(0.5);return false;">50%</a> | <a href="#" onclick="javascript:resize(.66);return false;">66%</a> | 
+			 <a href="#" onclick="javascript:resize(1);return false;">100%</a> | <a href="#" onclick="javascript:resize(1.5);return false;">150%</a></p>
+	</div>
+</div>
+</body></html>
