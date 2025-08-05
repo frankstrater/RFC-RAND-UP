@@ -137,6 +137,8 @@ So, each civ will have 4 city names lists:
 The capital is always at the top of 1 or 2.
 This picture shows cities picked from lists 3 and 4:
 
+![city names](images/city_names.jpg)
+
 
 ## Historical goals
 
